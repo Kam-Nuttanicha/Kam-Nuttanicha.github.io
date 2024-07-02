@@ -10,12 +10,12 @@ body {
     background: url('pic/001.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
-    min-height: 100vh; /* ใช้ min-height แทน height */
-    overflow-x: hidden; /* ปิดการเลื่อนในแนวนอนเท่านั้น */
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 header {
-    position: fixed; /* เปลี่ยนจาก absolute เป็น fixed */
+    position: fixed;
     top: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
@@ -27,7 +27,7 @@ nav ul {
     display: flex;
     justify-content: flex-end;
     padding: 1rem;
-    margin: 0; /* เพิ่ม margin: 0 เพื่อให้ header อยู่ในตำแหน่งที่ถูกต้อง */
+    margin: 0;
 }
 
 nav ul li {
@@ -48,124 +48,11 @@ nav ul li a:hover {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 8rem 2rem; /* เพิ่ม padding-top เพื่อให้ content ไม่ติด header */
+    padding: 8rem 2rem;
     display: flex;
-    flex-direction: column; /* เปลี่ยน alignment */
-    align-items: flex-start; /* เปลี่ยน alignment */
-    position: relative;
-}
-
-.content {
-    width: 100%; /* ปรับขนาดให้เต็มหน้าจอ */
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: flex-start;
     position: relative;
-    z-index: 2;
-}
-
-.text-content {
-    max-width: 100%; /* ปรับให้ใช้งานพื้นที่ได้ดีขึ้น */
-    margin-bottom: 2rem; /* เพิ่มระยะห่างด้านล่าง */
-    position: relative;
-    z-index: 2;
-    padding-top: 4rem; /* เพิ่ม padding-top เพื่อเว้นที่ว่างด้านบน */
-}
-
-.text-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* โอเวอร์เลย์สีดำโปร่งใส */
-    z-index: 1;
-}
-
-.text-content h1, .text-content p {
-    position: relative;
-    z-index: 2;
-}
-
-.text-content h1 {
-    font-size: 4rem;
-    line-height: 1;
-    margin-top: 0;
-    margin-bottom: 1rem;
-}
-
-.text-content p {
-    font-size: 1.2rem; /* ขนาดตัวอักษรใหญ่ขึ้นเล็กน้อย */
-    max-width: 80%;
-    margin: 0;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-}
-
-.grid-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    height: 200px; /* ความสูงคงที่ของกริด */
-}
-
-.grid-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* จัดการให้รูปครอบคลุมพื้นที่ */
-    border-radius: 10px;
-}
-
-.grid-item span {
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 0.3rem 0.5rem;
-    border-radius: 5px;
-    color: #fff;
-}
-
-body, html {
-    overflow-y: scroll;
-    min-height: 100%;
-}
-.text-con p {
-    font-size: 1.2rem; /* ขนาดตัวอักษรใหญ่ขึ้นเล็กน้อย */
-    max-width: 80%;
-    margin: 0;
-}
-
-
-
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
 }
 
 .background-overlay {
@@ -174,43 +61,58 @@ nav ul li a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* โอเวอร์เลย์สีดำ */
+    background: rgba(0, 0, 0, 0.5);
     z-index: -1;
 }
+
 .content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     text-align: center;
     color: white;
     padding: 5px;
 }
+
 .text-con {
-    margin-top: 10px; /* ปรับช่องว่างของเนื้อหาด้านบนลง */
+    margin-top: 10px;
     padding: 20px;
-    text-align: left; /* จัดให้ข้อความใน <p> จัดอยู่ทางซ้าย */
+    text-align: left;
     display: flex;
     flex-direction: column;
-    align-items: center; /* จัดให้อยู่กึ่งกลางตามแนวนอน */
-    justify-content: center; /* จัดให้อยู่กึ่งกลางตามแนวตั้ง */
-    height: 100%; /* จัดให้เต็มพื้นที่ของพ่อความสูง */
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
+
 h1 {
-    margin-bottom: 10px; /* ปรับช่องว่างด้านล่างของหัวข้อลง */
-    margin-top: -80px;
-    text-align: center; /* จัดให้หัวข้ออยู่กึ่งกลาง */
+    margin-bottom: 10px;
+    text-align: center;
 }
-embed {
+
+.embed-container {
     width: 100%;
-    height: 600px;
-}
-video {
-    width: 100%;
+    height: 80vh; /* เพิ่มความสูงให้เท่ากับ 80% ของความสูงหน้าจอ */
     margin-top: 20px;
 }
+
+embed {
+    width: 100%;
+    height: 100%; /* ใช้ความสูงที่กำหนดในคอนเทนเนอร์ */
+}
+
+video {
+    width: 2000%;
+    margin-top: 20px;
+}
+
 .text-con p {
-    margin-top: 20px; /* เพิ่มระยะห่างด้านบนของ <p> */
-    font-size: 1.2rem; /* ขนาดตัวอักษรใหญ่ขึ้นเล็กน้อย */
+    margin-top: 20px;
+    font-size: 1.2rem;
     max-width: 80%;
-    margin: 0 auto; /* จัดให้อยู่กึ่งกลาง */
-    padding: 0rem 0rem 3rem 0rem;
+    margin: 0 auto;
+    padding: 0 0 3rem 0;
 }

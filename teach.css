@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* โอเวอร์เลย์สีดำ */
+    z-index: -1;
+}
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding: 5px;
+}
+.text-con {
+    margin-top: 10px; /* ปรับช่องว่างของเนื้อหาด้านบนลง */
+    padding: 20px;
+    text-align: left; /* จัดให้ข้อความใน <p> จัดอยู่ทางซ้าย */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* จัดให้อยู่กึ่งกลางตามแนวนอน */
+    justify-content: center; /* จัดให้อยู่กึ่งกลางตามแนวตั้ง */
+    height: 100%; /* จัดให้เต็มพื้นที่ของพ่อความสูง */
+}
+h1 {
+    margin-bottom: 10px; /* ปรับช่องว่างด้านล่างของหัวข้อลง */
+    margin-top: -80px;
+    text-align: center; /* จัดให้หัวข้ออยู่กึ่งกลาง */
+}
+embed {
+    width: 100%;
+    height: 600px;
+}
+video {
+    width: 100%;
+    margin-top: 20px;
+}
+.text-con p {
+    margin-top: 20px; /* เพิ่มระยะห่างด้านบนของ <p> */
+    font-size: 1.2rem; /* ขนาดตัวอักษรใหญ่ขึ้นเล็กน้อย */
+    max-width: 80%;
+    margin: 0 auto; /* จัดให้อยู่กึ่งกลาง */
+    padding: 0rem 0rem 3rem 0rem;
+}

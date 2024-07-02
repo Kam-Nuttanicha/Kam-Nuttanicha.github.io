@@ -1,0 +1,37 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.gallery img {
+    width: calc(50% - 10px); /* เริ่มต้นด้วย 2 รูปในบรรทัดแรก */
+}
+.gallery img:nth-child(3), .gallery img:nth-child(4), .gallery img:nth-child(5) {
+    width: calc(33.33% - 10px); /* 3 รูปในบรรทัดที่สอง */
+}
+.gallery img:nth-child(6), .gallery img:nth-child(7) {
+    width: calc(50% - 10px); /* 2 รูปในบรรทัดที่สาม */
+}
+.gallery img:nth-child(8), .gallery img:nth-child(9), .gallery img:nth-child(10) {
+    width: calc(33.33% - 10px); /* 3 รูปในบรรทัดที่สี่ */
+}
+.gallery img:nth-child(13) {
+    width: calc(100% - 10px); /* รูปสุดท้ายขนาดเต็มแถว */
+}
+@media (max-width: 768px) {
+    .gallery img {
+        width: calc(50% - 10px); /* 2 รูปต่อบรรทัดในหน้าจอที่เล็กกว่า */
+    }
+    .gallery img:nth-child(n) {
+        width: calc(50% - 10px); /* 2 รูปต่อบรรทัดในหน้าจอที่เล็กกว่า */
+    }
+    .gallery img:nth-child(13) {
+        width: 100%; /* รูปสุดท้ายขนาดเต็มแถวในหน้าจอที่เล็กกว่า */
+    }
+}
+@media (max-width: 480px) {
+    .gallery img {
+        width: 100%; /* 1 รูปต่อบรรทัดในหน้าจอที่เล็กที่สุด */
+    }
+}
